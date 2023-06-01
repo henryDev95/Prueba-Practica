@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AmobaApp</string>
+    <string name="title">BIENVENIDO ESPECIALISTA</string>
+    <string name="olvidadoContrasenia">¿Olvidaste tu contraseña?</string>
+    <string name="txt_email">Dirección de email</string>
+    <string name="txt_password">Tu contraseña</string>
+    <string name="description_text">Paciente Actual</string>
+    <string name="text_title">PACIENTES ACTUALES</string>
+</resources>
