@@ -1,9 +1,9 @@
 package com.henrymoya.amobaapp.ui.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.henrymoya.amobaapp.core.sesion.SessionManagement
@@ -28,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
                     emailInput.editableText.toString(),
                     passwordInput.editableText.toString()
                 )
+                borrarCampos()
                 userViewModel.login(user)
                 userViewModel.userResponse.observe(this@LoginActivity, Observer { user ->
                     if (!user.email.equals("")) {
@@ -43,5 +44,10 @@ class LoginActivity : AppCompatActivity() {
                 })
             }
         }
+    }
+
+    fun borrarCampos() {
+        binding.emailInput.setText("")
+        binding.passwordInput.setText("")
     }
 }
